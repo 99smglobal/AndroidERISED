@@ -36,7 +36,7 @@ public class MainActivity extends ActionBarActivity
         setContentView(R.layout.activity_main);
 
         mTextview= (TextView) findViewById(R.id.demoTxt);
-mTextview.setText("Hey there!! ");
+        mTextview.setText("Hey there!! ");
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
