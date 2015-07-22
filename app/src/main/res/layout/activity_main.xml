@@ -54,10 +54,10 @@
               android:id="@+id/kid_btn"
               android:layout_below="@+id/man_btn"
               android:layout_centerHorizontal="true"
-              android:layout_marginTop="85dp"
               android:background="@drawable/mybutton"
               android:src="@drawable/kid"
-              android:scaleType="fitCenter" />
+              android:scaleType="fitCenter"
+              android:layout_marginTop="25dp" />
       </RelativeLayout>
 
   </FrameLayout>
