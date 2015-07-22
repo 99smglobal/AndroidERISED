@@ -11,5 +11,6 @@ public class Men extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        setContentView(R.layout.skeleton_grid);
     }
 }
