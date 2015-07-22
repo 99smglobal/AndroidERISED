@@ -51,6 +51,24 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
             startActivity(clicked);
             }
         });
+        women=(ImageButton)findViewById(R.id.woman_btn);
+
+        women.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             Intent clicked = new Intent(getApplicationContext(),Women.class);
+                startActivity(clicked);
+            }
+        });
+        kids=(ImageButton) findViewById(R.id.kid_btn);
+        kids.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent clicked= new Intent(getApplicationContext(),Kids.class);
+                startActivity(clicked);
+            }
+        });
+
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
