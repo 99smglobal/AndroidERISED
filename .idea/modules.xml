@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidERISED.iml" filepath="$PROJECT_DIR$/AndroidERISED.iml" />
       <module fileurl="file://$PROJECT_DIR$/Erised6.iml" filepath="$PROJECT_DIR$/Erised6.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>
+

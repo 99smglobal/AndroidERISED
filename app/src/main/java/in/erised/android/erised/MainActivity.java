@@ -1,6 +1,7 @@
 package in.erised.android.erised;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -12,13 +13,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-
+public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+/*
     TextView mTextview;
+  */
+   ImageButton men, women, kids;
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -34,9 +37,21 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
+/*
         mTextview= (TextView) findViewById(R.id.demoTxt);
         mTextview.setText("Hey there!! ");
+*/
+  men= (ImageButton) findViewById(R.id.man_btn);
+        women= (ImageButton) findViewById(R.id.woman_btn);
+
+        men.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent clicked= new Intent(getApplicationContext(),Men.class);
+            startActivity(clicked);
+            }
+        });
+
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
