@@ -11,17 +11,12 @@
       android:layout_height="match_parent"
       android:layout_width="match_parent"
 >
-  <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="New Text"
-          android:id="@+id/demoTxt"
-          />
+
       <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:background="#F0F3F6">
+          android:background="@drawable/startsplash">
 
         <ImageButton
             android:layout_width="100dp"
@@ -69,6 +64,47 @@
               android:src="@drawable/offers"
               android:background="#00000000"
               android:layout_marginRight="50dp" />
+
+          <TextView
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:text="New Text"
+              android:id="@+id/men_txt"
+              android:layout_below="@+id/man_btn"
+              android:layout_alignLeft="@+id/man_btn"
+              android:layout_alignStart="@+id/man_btn"
+              style="@style/TextFont" />
+
+          <TextView
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:text="New Text"
+              android:id="@+id/women_txt"
+              android:layout_alignBottom="@+id/men_txt"
+              android:layout_alignLeft="@+id/woman_btn"
+              android:layout_alignStart="@+id/woman_btn"
+              style="@style/TextFont" />
+
+          <TextView
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:text="New Text"
+              android:id="@+id/kids_txt"
+              android:layout_below="@+id/kid_btn"
+              android:layout_alignLeft="@+id/kid_btn"
+              android:layout_alignStart="@+id/kid_btn"
+              style="@style/TextFont" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="New Text"
+              android:id="@+id/offers_txt"
+              android:layout_alignBottom="@+id/kids_txt"
+              android:layout_alignLeft="@+id/offers_btn"
+              android:layout_alignStart="@+id/offers_btn"
+              style="@style/TextFont" />
+
       </RelativeLayout>
 
   </FrameLayout>

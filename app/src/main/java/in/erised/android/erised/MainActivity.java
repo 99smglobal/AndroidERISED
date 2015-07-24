@@ -2,6 +2,7 @@ package in.erised.android.erised;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,7 +22,8 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 /*
     TextView mTextview;
   */
-   ImageButton men, women, kids;
+   ImageButton men, women, kids, offers;
+    TextView menTxt, womenTxt, kidTxt, offersTxt;
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -35,12 +37,28 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Typeface tf= Typeface.createFromAsset(getAssets(),"fonts/Walkway Black.ttf");
         setContentView(R.layout.activity_main);
 /*
         mTextview= (TextView) findViewById(R.id.demoTxt);
         mTextview.setText("Hey there!! ");
 */
+        menTxt= (TextView)findViewById(R.id.men_txt);
+        menTxt.setTypeface(tf);
+        menTxt.setText("Men");
+
+        womenTxt= (TextView)findViewById(R.id.women_txt);
+        womenTxt.setTypeface(tf);
+        womenTxt.setText("Women");
+
+        kidTxt= (TextView) findViewById(R.id.kids_txt);
+        kidTxt.setTypeface(tf);
+        kidTxt.setText("Kids");
+
+        offersTxt= (TextView) findViewById(R.id.offers_txt);
+        offersTxt.setTypeface(tf);
+        offersTxt.setText("Special Offers");
+
   men= (ImageButton) findViewById(R.id.man_btn);
         women= (ImageButton) findViewById(R.id.woman_btn);
 
@@ -87,8 +105,32 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         fragmentManager.beginTransaction()
                 .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
-    }
 
+   //selectItem(position);
+    }
+    /*private void selectItem(int position) {
+
+        // Handle Nav Options
+        Intent intent;
+        switch (position) {
+            case 0:
+                intent = new Intent(getApplicationContext(),Men.class);
+                startActivity(intent);
+                break;
+
+            case 1:
+                intent = new Intent(getApplicationContext(),Women.class);
+                startActivity(intent);
+                // etc.
+                break;
+            case 2:
+                intent = new Intent(getApplicationContext(),Kids.class);
+                startActivity(intent);
+
+        }
+
+    }
+*/
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
