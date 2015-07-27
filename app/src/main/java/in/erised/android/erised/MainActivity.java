@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
     TextView mTextview;
   */
    ImageButton men, women, kids, offers;
-    TextView menTxt, womenTxt, kidTxt, offersTxt;
+    TextView menTxt, womenTxt, kidTxt, offersTxt, nullTxt;
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -43,6 +43,9 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
         mTextview= (TextView) findViewById(R.id.demoTxt);
         mTextview.setText("Hey there!! ");
 */
+        nullTxt= (TextView)findViewById(R.id.null_txt);
+        nullTxt.setText("");
+
         menTxt= (TextView)findViewById(R.id.men_txt);
         menTxt.setTypeface(tf);
         menTxt.setText("Men");
